@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.content-area-container {
+    @apply mx-[20px] text-left block; 
+}
+
+.three-col-container {
+    @apply grid grid-cols-3 mx-[20px] gap-4;
+}
+
+.input-short-text-field {
+    @apply my-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block p-2.5;
+}
+
+.blue-add-button {
+    @apply my-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none;
+}
+
+.task-card {
+    @apply my-5 mr-10 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700;
+}
+
+.input-paragraph-text {
+    @apply block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    @apply dark:text-white;
+}
+
+.in-progress-button {
+    @apply my-2 mx-2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-700 rounded-lg hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800;
+}
+.complete-button {
+    @apply my-2 mx-2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800;
+}
+
+.not-started-button {
+    @apply my-2 mx-2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800;
+}
+
+.not-started-task-cards {
+    display: block;
+}
+
+.in-progress-task-cards {
+    display: none;
+}
+
+.done-task-cards {
+    display: none;
+}
+
+.card-title {
+    @apply mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white;
+}
+
+.card-description {
+    @apply mb-3 font-normal text-gray-700 dark:text-gray-400;
+}
