@@ -4,6 +4,7 @@ const inputElement = document.querySelector('.js-name-input');
 const descriptionElement = document.getElementById('js-description');
 const toDoList = [];
 const inProgressList = [];
+const completeList = [];
 
 addTaskButton.addEventListener("click", addTask);
 
@@ -79,6 +80,8 @@ function moveToProgress(currentTaskCard) {
    
    replaceButtons(currentTaskCard);
    inProgressDiv.appendChild(currentTaskCard);
+
+   
    
 }
 
@@ -96,7 +99,7 @@ function moveToComplete(currentTaskCard) {
 function replaceButtons(currentTaskCard) {
    const notStartedButton = document.createElement("button");
    notStartedButton.classList.add("not-started-button");
-   notStartedButton.innerHTML = 'Not Started <svg version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" fill="#fff" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0 {display: none}.st1 {display: inline}</style><g id="_x32_8_1_"><path d="M78.1 0v6.2c22.4 0 40.5 18.2 40.5 40.6s-18.1 40.6-40.5 40.6H17.9l27.9-28-4.5-4.5L5.5 90.8l36 36.2 4.5-4.5-28.8-28.9h60.9c25.8 0 46.7-21 46.7-46.8S103.9 0 78.1 0z" id="icon_13_" /></g></svg>';
+   notStartedButton.innerHTML = 'Not Started  <svg class="reverse-arrow" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" fill="#fff" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0 {display: none}.st1 {display: inline}</style><g id="_x32_8_1_"><path d="M78.1 0v6.2c22.4 0 40.5 18.2 40.5 40.6s-18.1 40.6-40.5 40.6H17.9l27.9-28-4.5-4.5L5.5 90.8l36 36.2 4.5-4.5-28.8-28.9h60.9c25.8 0 46.7-21 46.7-46.8S103.9 0 78.1 0z" id="icon_13_" /></g></svg>';
 
    const currentProgressButton = currentTaskCard.querySelector('.in-progress-button');
 
@@ -111,7 +114,7 @@ function replaceAllButtons(currentTaskCard) {
    const currentProgressButton = currentTaskCard.querySelector('.in-progress-button');
 
    currentProgressButton.style.display = 'block';
-   currentProgressButton.innerHTML = 'In Progress <svg version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" fill="#fff" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0 {display: none}.st1 {display: inline}</style><g id="_x32_8_1_"><path d="M78.1 0v6.2c22.4 0 40.5 18.2 40.5 40.6s-18.1 40.6-40.5 40.6H17.9l27.9-28-4.5-4.5L5.5 90.8l36 36.2 4.5-4.5-28.8-28.9h60.9c25.8 0 46.7-21 46.7-46.8S103.9 0 78.1 0z" id="icon_13_" /></g></svg>'
+   currentProgressButton.innerHTML = 'In Progress <svg class="reverse-arrow" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" fill="#fff" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0 {display: none}.st1 {display: inline}</style><g id="_x32_8_1_"><path d="M78.1 0v6.2c22.4 0 40.5 18.2 40.5 40.6s-18.1 40.6-40.5 40.6H17.9l27.9-28-4.5-4.5L5.5 90.8l36 36.2 4.5-4.5-28.8-28.9h60.9c25.8 0 46.7-21 46.7-46.8S103.9 0 78.1 0z" id="icon_13_" /></g></svg>'
 
    const currentCompleteButton = currentTaskCard.querySelector('.complete-button');
 

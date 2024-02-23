@@ -558,41 +558,8 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
-.ms-2 {
-  margin-inline-start: 0.5rem;
-}
-
 .block {
   display: block;
-}
-
-.inline {
-  display: inline;
-}
-
-.h-3 {
-  height: 0.75rem;
-}
-
-.h-3\.5 {
-  height: 0.875rem;
-}
-
-.w-3 {
-  width: 0.75rem;
-}
-
-.w-3\.5 {
-  width: 0.875rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-lg {
@@ -600,25 +567,8 @@ video {
   line-height: 1.75rem;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
 .font-medium {
   font-weight: 500;
-}
-
-.font-normal {
-  font-weight: 400;
-}
-
-.tracking-tight {
-  letter-spacing: -0.025em;
-}
-
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .text-gray-900 {
@@ -821,6 +771,7 @@ p {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   display: inline-flex;
+  width: 150px;
   align-items: center;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
@@ -875,6 +826,7 @@ p {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   display: inline-flex;
+  width: 140px;
   align-items: center;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
@@ -929,6 +881,7 @@ p {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   display: inline-flex;
+  width: 150px;
   align-items: center;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
@@ -1020,20 +973,19 @@ p {
   }
 }
 
-.rtl\:rotate-180:where([dir="rtl"], [dir="rtl"] *) {
-  --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+button svg {
+  max-width: 20px;
+  margin-left: 5px;
+}
+
+.reverse-arrow {
+  display: inline-block;
 }
 
 @media (prefers-color-scheme: dark) {
   .dark\:bg-gray-900 {
     --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-  }
-
-  .dark\:text-gray-400 {
-    --tw-text-opacity: 1;
-    color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 
   .dark\:text-white {
