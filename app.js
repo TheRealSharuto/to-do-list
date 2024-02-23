@@ -1,3 +1,8 @@
+window.onload = (event) => {
+   inputElement.value = '';
+   descriptionElement.value = '';
+ };
+
 addTaskButton = document.getElementById("add-task");
 
 const inputElement = document.querySelector('.js-name-input');
@@ -75,8 +80,41 @@ function moveToProgress(currentTaskCard) {
    console.log("Move to progress");
 
    const inProgressDiv = document.getElementById("js-in-progress-div");
-   console.log(currentTaskCard.innerHTML);
-   console.log(inProgressDiv.innerHTML);
+   console.log("Current card HTML: \n" + currentTaskCard.innerHTML);
+   console.log("The current html of in progress div: \n" + inProgressDiv.innerHTML);
+   // current html string
+   const currentCardContent = currentTaskCard.innerHTML;
+   
+   // DOM Parser object
+   const parser = new DOMParser();
+   const doc = parser.parseFromString(currentCardContent, "text/html");
+   // Find the first h5 element
+   const h5 = doc.querySelector("h5");
+   // get the text content of h5 element
+   const currentTaskName = h5 ? h5.textContent : "Not found";
+
+   console.log(currentTaskName); // Output: Test1
+   
+   const taskFound = toDoList.find(subArray => subArray[0] === currentTaskName);
+   let newSubArray = [];
+
+   
+   if (taskFound) {
+      console.log(`Found: ${taskFound[0]}, ${taskFound[1]}`);
+      newSubArray = [taskFound[0], taskFound[1]]
+   }
+
+   const removeIndex = toDoList.findIndex(function(sub) {
+      return sub.indexOf(currentTaskName) !== -1;
+   });
+   
+   console.log(`To remove: ${removeIndex}`);
+
+   toDoList.splice(removeIndex, 1);
+   inProgressList.push(newSubArray);
+   console.log("Item removed successfully from not started. Item added successfully to in progress list.");
+   console.log(inProgressList);
+   console.log(toDoList);
    
    replaceButtons(currentTaskCard);
    inProgressDiv.appendChild(currentTaskCard);
